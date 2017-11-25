@@ -72,6 +72,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="collectionView" destination="FKn-rm-kam" id="JdS-GU-dYn"/>
                         <segue destination="Hgu-X0-PbQ" kind="show" identifier="ShowEventDetail" id="ZdR-hV-ShJ"/>
@@ -99,6 +102,7 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="event"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIl-NP-z56">
@@ -128,6 +132,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uVQ-Dg-Xo1"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vHC-pd-feo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -404,6 +411,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="G7j-bq-gni" kind="relationship" relationship="rootViewController" id="rgQ-gH-O4v"/>
                     </connections>
@@ -506,6 +516,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="collectionView" destination="OoS-K7-dcH" id="U7v-VH-bmM"/>
                         <segue destination="Hgu-X0-PbQ" kind="show" identifier="ShowEventDetail" id="buL-ig-Fhb"/>
@@ -527,6 +540,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="QOa-5C-hYA" kind="relationship" relationship="rootViewController" id="Ki4-2j-zhu"/>
                     </connections>
@@ -549,23 +565,14 @@
         <namedColor name="darkIndigo">
             <color red="0.10999999940395355" green="0.019999999552965164" blue="0.36899998784065247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="darkIndigo">
-            <color red="0.10999999940395355" green="0.019999999552965164" blue="0.36899998784065247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="lightPeriwinkle">
             <color red="0.80000001192092896" green="0.85100001096725464" blue="0.98799997568130493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="paleBlue">
             <color red="0.94900000095367432" green="0.96100002527236938" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="paleBlue">
-            <color red="0.94900000095367432" green="0.96100002527236938" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="paleBlue">
-            <color red="0.94900000100000004" green="0.96100002529999995" blue="0.99599999189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="buL-ig-Fhb"/>
+        <segue reference="ZdR-hV-ShJ"/>
     </inferredMetricsTieBreakers>
 </document>

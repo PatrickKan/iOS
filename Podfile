@@ -4,4 +4,5 @@ target 'HackIllinois' do
     use_frameworks!
     pod 'APIManager', '~> 0.1.1'
     pod 'lottie-ios', '~> 2.1.4'
+    pod 'Hero',       '~> 1.0.1'
 end

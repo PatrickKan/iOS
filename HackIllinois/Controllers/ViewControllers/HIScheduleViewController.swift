@@ -9,8 +9,11 @@
 import Foundation
 import UIKit
 import CoreData
+import Hero
 
 class HIScheduleViewController: HIBaseViewController {
+
+    var transitionCell: UIView?
 
     lazy var fetchedResultsController: NSFetchedResultsController<Event> = {
         let fetchRequest: NSFetchRequest<Event> = Event.fetchRequest()
@@ -80,6 +83,11 @@ extension HIScheduleViewController {
 
         try! fetchedResultsController.performFetch()
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        transitionCell?.heroID = nil
+    }
 }
 
 // MARK: - UICollectionViewDataSource
@@ -118,6 +126,9 @@ extension HIScheduleViewController {
 // MARK: - UICollectionViewDelegate
 extension HIScheduleViewController {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        transitionCell = collectionView.cellForItem(at: indexPath)
+        transitionCell?.heroID = "event"
+        navigationController?.heroNavigationAnimationType = .fade
         performSegue(withIdentifier: "ShowEventDetail", sender: indexPath)
         collectionView.deselectItem(at: indexPath, animated: true)
     }
