@@ -63,6 +63,7 @@ class HIMenuController: UIViewController {
     func animateOpen() {
         stackViewContainerHeight.constant = stackViewHeight.constant + 11 + 28 + view.safeAreaInsets.top
         contentViewOverlap.constant = -view.safeAreaInsets.top
+        view.setNeedsLayout()
 
         UIView.animate(withDuration: 0.75, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.0, options: [.allowUserInteraction, .beginFromCurrentState], animations: {
             self.overlayView.alpha = 0.70

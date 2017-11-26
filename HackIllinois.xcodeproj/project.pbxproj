@@ -14,6 +14,8 @@
 		951827A91EA35DB800049F79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 951827991EA35DB800049F79 /* Assets.xcassets */; };
 		951827B41EA35E8B00049F79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 951827B21EA35E8B00049F79 /* LaunchScreen.storyboard */; };
 		951827B51EA35E8B00049F79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 951827B31EA35E8B00049F79 /* Main.storyboard */; };
+		952D00B31FCA498D000429FC /* HIEventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952D00B21FCA498D000429FC /* HIEventDetailViewController.swift */; };
+		952D00B51FCA49E3000429FC /* HIEventDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 952D00B41FCA49E3000429FC /* HIEventDetailViewController.storyboard */; };
 		953199C91FC25CA0009F2AA1 /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953199C81FC25CA0009F2AA1 /* CoreDataController.swift */; };
 		953C54791FC7A93400B566C9 /* HIBaseViewController+UICollectionViewDelegateFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953C54781FC7A93400B566C9 /* HIBaseViewController+UICollectionViewDelegateFlowLayout.swift */; };
 		953C547B1FC7B36500B566C9 /* HICollectionViewDelegateFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953C547A1FC7B36500B566C9 /* HICollectionViewDelegateFlowLayout.swift */; };
@@ -33,7 +35,6 @@
 		959AD3FF1FC4EB8400691399 /* HIAnnouncementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AD3FE1FC4EB8400691399 /* HIAnnouncementCell.swift */; };
 		959AD4011FC4ECC700691399 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AD4001FC4ECC700691399 /* Operators.swift */; };
 		959AD4031FC4F5FA00691399 /* HIAnnouncementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 959AD4021FC4F5FA00691399 /* HIAnnouncementCell.xib */; };
-		959AD4051FC5159700691399 /* HIEventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AD4041FC5159700691399 /* HIEventDetailViewController.swift */; };
 		959AD4071FC5165800691399 /* HIBaseViewController+AlertPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AD4061FC5165800691399 /* HIBaseViewController+AlertPresentation.swift */; };
 		959AD40C1FC53AEB00691399 /* HIEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AD40B1FC53AEB00691399 /* HIEventCell.swift */; };
 		959AD40E1FC53AF500691399 /* HIEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 959AD40D1FC53AF500691399 /* HIEventCell.xib */; };
@@ -73,6 +74,8 @@
 		951827A31EA35DB800049F79 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		951827B21EA35E8B00049F79 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		951827B31EA35E8B00049F79 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		952D00B21FCA498D000429FC /* HIEventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIEventDetailViewController.swift; sourceTree = "<group>"; };
+		952D00B41FCA49E3000429FC /* HIEventDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HIEventDetailViewController.storyboard; sourceTree = "<group>"; };
 		953199C81FC25CA0009F2AA1 /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 		953C54781FC7A93400B566C9 /* HIBaseViewController+UICollectionViewDelegateFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HIBaseViewController+UICollectionViewDelegateFlowLayout.swift"; sourceTree = "<group>"; };
 		953C547A1FC7B36500B566C9 /* HICollectionViewDelegateFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HICollectionViewDelegateFlowLayout.swift; sourceTree = "<group>"; };
@@ -92,7 +95,6 @@
 		959AD3FE1FC4EB8400691399 /* HIAnnouncementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIAnnouncementCell.swift; sourceTree = "<group>"; };
 		959AD4001FC4ECC700691399 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		959AD4021FC4F5FA00691399 /* HIAnnouncementCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HIAnnouncementCell.xib; sourceTree = "<group>"; };
-		959AD4041FC5159700691399 /* HIEventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIEventDetailViewController.swift; sourceTree = "<group>"; };
 		959AD4061FC5165800691399 /* HIBaseViewController+AlertPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HIBaseViewController+AlertPresentation.swift"; sourceTree = "<group>"; };
 		959AD40B1FC53AEB00691399 /* HIEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIEventCell.swift; sourceTree = "<group>"; };
 		959AD40D1FC53AF500691399 /* HIEventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HIEventCell.xib; sourceTree = "<group>"; };
@@ -233,6 +235,15 @@
 			path = StoryBoards;
 			sourceTree = "<group>";
 		};
+		952D00B11FCA498D000429FC /* HIEventDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				952D00B21FCA498D000429FC /* HIEventDetailViewController.swift */,
+				952D00B41FCA49E3000429FC /* HIEventDetailViewController.storyboard */,
+			);
+			path = HIEventDetailViewController;
+			sourceTree = "<group>";
+		};
 		957D7CA41FC2940800C4332A /* HIAPIModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,7 +284,7 @@
 			children = (
 				956F41E01FC7577500557DC7 /* HIAnnouncmentsViewController.swift */,
 				95DE25031FC3FCF7000F599D /* HIBaseViewController */,
-				959AD4041FC5159700691399 /* HIEventDetailViewController.swift */,
+				952D00B11FCA498D000429FC /* HIEventDetailViewController */,
 				959AD3FB1FC4B0DE00691399 /* HILaunchViewController.swift */,
 				957DB2E51FC2435100F8C45E /* HILoginViewController.swift */,
 				957D7C811FC28ED600C4332A /* HIScheduleViewController.swift */,
@@ -476,6 +487,7 @@
 				95CF9D7B1FC7EBCC00A3C69A /* HIRefreshControl.xib in Resources */,
 				951827B51EA35E8B00049F79 /* Main.storyboard in Resources */,
 				959C59261FC8A4B900761BF2 /* splashy_loader.json in Resources */,
+				952D00B51FCA49E3000429FC /* HIEventDetailViewController.storyboard in Resources */,
 				959AD40E1FC53AF500691399 /* HIEventCell.xib in Resources */,
 				95A472911FC6056700381329 /* HIDateHeader.xib in Resources */,
 				959AD4031FC4F5FA00691399 /* HIAnnouncementCell.xib in Resources */,
@@ -562,7 +574,6 @@
 				959AD3FF1FC4EB8400691399 /* HIAnnouncementCell.swift in Sources */,
 				956F41E11FC7577500557DC7 /* HIAnnouncmentsViewController.swift in Sources */,
 				959AD40C1FC53AEB00691399 /* HIEventCell.swift in Sources */,
-				959AD4051FC5159700691399 /* HIEventDetailViewController.swift in Sources */,
 				959AD4071FC5165800691399 /* HIBaseViewController+AlertPresentation.swift in Sources */,
 				959AD4011FC4ECC700691399 /* Operators.swift in Sources */,
 				95DE24F41FC3E534000F599D /* Event+CoreDataClass.swift in Sources */,
@@ -578,6 +589,7 @@
 				957DB2E61FC2435100F8C45E /* HILoginViewController.swift in Sources */,
 				95CF9D7D1FC7EF1500A3C69A /* HIRefreshControl.swift in Sources */,
 				951827A81EA35DB800049F79 /* AppDelegate.swift in Sources */,
+				952D00B31FCA498D000429FC /* HIEventDetailViewController.swift in Sources */,
 				959AD3FC1FC4B0DE00691399 /* HILaunchViewController.swift in Sources */,
 				953C547F1FC7B49600B566C9 /* HIBaseViewController+HICollectionViewDelegateFlowLayout.swift in Sources */,
 				953199C91FC25CA0009F2AA1 /* CoreDataController.swift in Sources */,

@@ -129,7 +129,21 @@ extension HIScheduleViewController {
         transitionCell = collectionView.cellForItem(at: indexPath)
         transitionCell?.heroID = "event"
         navigationController?.heroNavigationAnimationType = .fade
-        performSegue(withIdentifier: "ShowEventDetail", sender: indexPath)
+//        performSegue(withIdentifier: "ShowEventDetail", sender: indexPath)
+
+        let eventDetailViewController = UIStoryboard(name: "HIEventDetailViewController", bundle: nil).instantiateViewController(withIdentifier: "HIEventDetailViewController")
+        (eventDetailViewController as? HIEventDetailViewController)?.model = fetchedResultsController.object(at: indexPath)
+
+
+
+        eventDetailViewController.providesPresentationContextTransitionStyle = true
+        eventDetailViewController.definesPresentationContext = true
+        eventDetailViewController.modalPresentationStyle = .overCurrentContext
+        eventDetailViewController.isHeroEnabled = true
+        eventDetailViewController.heroModalAnimationType = .fade
+        present(eventDetailViewController, animated: true, completion: nil)
+
+
         collectionView.deselectItem(at: indexPath, animated: true)
     }
 }

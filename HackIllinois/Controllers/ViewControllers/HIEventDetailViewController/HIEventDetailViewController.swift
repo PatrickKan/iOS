@@ -20,5 +20,8 @@ class HIEventDetailViewController: HIBaseViewController {
         }
     }
 
+    @IBAction func dismiss() {
+        dismiss(animated: true, completion: nil)
+    }
     
 }
