@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Hero
 
 class HIEventListViewController: HIBaseViewController { }
 
@@ -61,6 +62,13 @@ extension HIEventListViewController {
             $0.modalTransitionStyle = .crossDissolve
 //            $0.model = self._fetchedResultsController?.object(at: indexPath) as? Event
         }
+        eventDetailViewController.isHeroEnabled = true
+        eventDetailViewController.heroModalAnimationType = .fade
+
+        if let cell = tableView.cellForRow(at: indexPath) as? HIEventCell {
+            cell.setupHero()
+        }
+
         present(eventDetailViewController, animated: true, completion: nil)
         super.tableView(tableView, didSelectRowAt: indexPath)
     }

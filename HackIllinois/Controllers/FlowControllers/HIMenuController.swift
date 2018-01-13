@@ -41,6 +41,8 @@ class HIMenuController: UIViewController {
         super.viewDidLoad()
 
         let tabBarController = UITabBarController()
+        tabBarController.isHeroEnabled = true
+//        tabBarController.heroTabBarAnimationType = .none
         tabBarController.tabBar.isHidden = true
         addChildViewController(tabBarController)
         tabBarController.view.translatesAutoresizingMaskIntoConstraints = false
@@ -78,6 +80,7 @@ class HIMenuController: UIViewController {
         _tabBarController?.viewControllers = viewControllers.map {
             _ = $0.view // forces viewDidLoad to run, allows .title to be accessible
             let navigationController = UINavigationController(rootViewController: $0)
+            navigationController.isHeroEnabled = true
             navigationController.title = $0.title
             return navigationController
         }

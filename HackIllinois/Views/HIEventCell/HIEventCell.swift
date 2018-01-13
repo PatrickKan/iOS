@@ -42,3 +42,19 @@ extension HIEventCell {
         }
     }
 }
+
+// MARK: - Hero
+extension HIEventCell {
+    func setupHero() {
+        heroID = "background"
+        containerView.heroID = "container"
+        favoritedButton.heroID = "favorite"
+        titleLabel.heroID = "title"
+    }
+
+    func teardownHero() {
+        heroID = nil
+        favoritedButton.heroID = nil
+        titleLabel.heroID = nil
+    }
+}
