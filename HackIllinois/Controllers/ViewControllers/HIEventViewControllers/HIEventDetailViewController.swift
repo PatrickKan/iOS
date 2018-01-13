@@ -16,7 +16,7 @@ class HIEventDetailViewController: HIBaseViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if model == nil {
-            presentErrorController(title: "Error", message: "Failed to load event.", dismissParentOnCompletion: true)
+//            presentErrorController(title: "Error", message: "Failed to load event.", dismissParentOnCompletion: true)
         }
     }
 

@@ -87,6 +87,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QG0-2O-xgF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hsy-3E-9uy">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <color key="backgroundColor" red="0.08235294118" green="0.0" blue="0.29608163240000002" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gDq-CE-afP">
                                 <rect key="frame" x="32" y="84" width="311" height="519"/>
                                 <subviews>
@@ -105,11 +114,39 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fzc-AT-b5Y">
+                                        <rect key="frame" x="12" y="44" width="287" height="387"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="taB-e6-jEl">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EVENT DETAILS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfU-EN-be3">
+                                        <rect key="frame" x="12" y="13" width="287" height="18"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="textColor" name="darkIndigo"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" name="paleBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="95p-JX-yBu" secondAttribute="trailing" constant="14" id="4as-VD-JuN"/>
+                                    <constraint firstItem="vfU-EN-be3" firstAttribute="leading" secondItem="gDq-CE-afP" secondAttribute="leading" constant="12" id="9iD-0t-p9X"/>
+                                    <constraint firstAttribute="trailing" secondItem="vfU-EN-be3" secondAttribute="trailing" constant="12" id="Bbv-bM-bGd"/>
+                                    <constraint firstItem="fzc-AT-b5Y" firstAttribute="leading" secondItem="gDq-CE-afP" secondAttribute="leading" constant="12" id="F2f-Ka-sZ9"/>
+                                    <constraint firstItem="fzc-AT-b5Y" firstAttribute="top" secondItem="gDq-CE-afP" secondAttribute="top" constant="44" id="K0Q-7I-Dc0"/>
+                                    <constraint firstItem="vfU-EN-be3" firstAttribute="top" secondItem="gDq-CE-afP" secondAttribute="top" constant="13" id="PIX-IP-3jO"/>
+                                    <constraint firstAttribute="trailing" secondItem="fzc-AT-b5Y" secondAttribute="trailing" constant="12" id="aTa-kO-DAA"/>
                                     <constraint firstItem="95p-JX-yBu" firstAttribute="leading" secondItem="gDq-CE-afP" secondAttribute="leading" constant="14" id="bvI-De-K2M"/>
+                                    <constraint firstItem="95p-JX-yBu" firstAttribute="top" secondItem="fzc-AT-b5Y" secondAttribute="bottom" constant="24" id="c7L-mI-KBy"/>
                                     <constraint firstAttribute="bottom" secondItem="95p-JX-yBu" secondAttribute="bottom" constant="14" id="mpg-mT-EK7"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -119,10 +156,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.082352941176470587" green="0.0" blue="0.29608163237571716" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="QG0-2O-xgF" secondAttribute="bottom" id="4g4-Ec-uDc"/>
                             <constraint firstItem="gDq-CE-afP" firstAttribute="top" secondItem="gNm-yh-aHC" secondAttribute="top" constant="64" id="5m2-3L-FMb"/>
+                            <constraint firstAttribute="trailing" secondItem="QG0-2O-xgF" secondAttribute="trailing" id="AHL-ic-gZT"/>
                             <constraint firstItem="gNm-yh-aHC" firstAttribute="bottom" secondItem="gDq-CE-afP" secondAttribute="bottom" constant="64" id="LmI-e7-b9R"/>
+                            <constraint firstItem="QG0-2O-xgF" firstAttribute="top" secondItem="PPX-US-gK9" secondAttribute="top" id="NRS-hO-0wD"/>
+                            <constraint firstItem="QG0-2O-xgF" firstAttribute="leading" secondItem="PPX-US-gK9" secondAttribute="leading" id="Syu-zE-94A"/>
                             <constraint firstItem="gNm-yh-aHC" firstAttribute="trailing" secondItem="gDq-CE-afP" secondAttribute="trailing" constant="32" id="hHb-Mq-rg5"/>
                             <constraint firstItem="gDq-CE-afP" firstAttribute="leading" secondItem="gNm-yh-aHC" secondAttribute="leading" constant="32" id="r69-1E-qt4"/>
                         </constraints>
@@ -136,10 +176,10 @@
     </scenes>
     <resources>
         <namedColor name="darkIndigo">
-            <color red="0.10999999940000001" green="0.019999999550000001" blue="0.36899998779999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.10999999940395355" green="0.019999999552965164" blue="0.36899998784065247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="darkIndigo">
-            <color red="0.10999999940395355" green="0.019999999552965164" blue="0.36899998784065247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.10999999940000001" green="0.019999999550000001" blue="0.36899998779999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="lightPeriwinkle">
             <color red="0.80000001190000003" green="0.851000011" blue="0.98799997569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
