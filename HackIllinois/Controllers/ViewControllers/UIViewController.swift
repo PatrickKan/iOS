@@ -9,10 +9,9 @@
 import Foundation
 import UIKit
 
-extension UIViewController {
-
-    @IBAction func openMenu(_ sender: UIButton) {
-        (tabBarController?.parent as? HIMenuController)?.animateOpen()
+extension UIViewController: StoryboardIdentifiable {
+    static var storyboardIdentifier: String {
+        return String(describing: self)
     }
-
 }
+
