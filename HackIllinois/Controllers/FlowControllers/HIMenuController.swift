@@ -42,7 +42,7 @@ class HIMenuController: UIViewController {
 
         let tabBarController = UITabBarController()
         tabBarController.isHeroEnabled = true
-//        tabBarController.heroTabBarAnimationType = .none
+        tabBarController.heroTabBarAnimationType = .none
         tabBarController.tabBar.isHidden = true
         addChildViewController(tabBarController)
         tabBarController.view.translatesAutoresizingMaskIntoConstraints = false
@@ -88,12 +88,14 @@ class HIMenuController: UIViewController {
 
     @IBAction func open(_ sender: Any) {
         guard state != .open else { return }
+        _tabBarController?.isHeroEnabled = false
         state = .open
         animateMenuFor(state)
     }
 
     @IBAction func close(_ sender: Any) {
         guard state != .closed else { return }
+        _tabBarController?.isHeroEnabled = true
         state = .closed
         animateMenuFor(state)
     }
@@ -129,10 +131,15 @@ class HIMenuController: UIViewController {
 
     private func animateMenuFor(_ state: State) {
         let animator = UIViewPropertyAnimator(duration: 0.5, dampingRatio: 0.8)
+        view.layoutIfNeeded()
         updateConstraintsFor(state)
+        print(stackViewContainerHeight.constant, contentViewOverlap.constant)
         animator.addAnimations {
             self.updateOverlayViewAlphaFor(state)
             self.view.layoutIfNeeded()
+        }
+        animator.addCompletion { (_) in
+            print(self.stackViewContainerHeight.constant, self.contentViewOverlap.constant)
         }
         animator.startAnimation()
     }

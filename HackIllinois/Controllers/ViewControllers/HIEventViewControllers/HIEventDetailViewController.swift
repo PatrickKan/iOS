@@ -28,6 +28,8 @@ class HIEventDetailViewController: HIBaseViewController {
 // MARK: - Actions
 extension HIEventDetailViewController {
     @IBAction func dismiss(_ sender: Any?) {
-        dismiss(animated: true, completion: nil)
+//        dismiss(animated: true, completion: nil)
+        navigationController?.heroNavigationAnimationType = .selectBy(presenting:.zoom, dismissing:.zoomOut)
+        navigationController?.popViewController(animated: true)
     }
 }

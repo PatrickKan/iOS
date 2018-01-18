@@ -68,8 +68,10 @@ extension HIEventListViewController {
         if let cell = tableView.cellForRow(at: indexPath) as? HIEventCell {
             cell.setupHero()
         }
-
-        present(eventDetailViewController, animated: true, completion: nil)
+        navigationController?.heroNavigationAnimationType = .selectBy(presenting:.zoom, dismissing:.zoomOut)
+//        heroModalAnimationType = .selectBy(presenting:.zoom, dismissing:.zoomOut)
+        navigationController?.pushViewController(eventDetailViewController, animated: true)
+//        present(eventDetailViewController, animated: true, completion: nil)
         super.tableView(tableView, didSelectRowAt: indexPath)
     }
 }
