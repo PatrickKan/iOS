@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A741D972033DD83007A73E6 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A741D952033DD83007A73E6 /* Interface.storyboard */; };
+		0A741D992033DD83007A73E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A741D982033DD83007A73E6 /* Assets.xcassets */; };
+		0A741DA02033DD83007A73E6 /* HackIllinois Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0A741D9F2033DD83007A73E6 /* HackIllinois Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0A741DA52033DD83007A73E6 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A741DA42033DD83007A73E6 /* InterfaceController.swift */; };
+		0A741DA72033DD83007A73E6 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A741DA62033DD83007A73E6 /* ExtensionDelegate.swift */; };
+		0A741DA92033DD83007A73E6 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A741DA82033DD83007A73E6 /* NotificationController.swift */; };
+		0A741DAB2033DD83007A73E6 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A741DAA2033DD83007A73E6 /* ComplicationController.swift */; };
+		0A741DAD2033DD83007A73E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A741DAC2033DD83007A73E6 /* Assets.xcassets */; };
+		0A741DB22033DD83007A73E6 /* HackIllinois Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0A741D932033DD83007A73E6 /* HackIllinois Watch.app */; };
 		35240BD1201408DB00E0C0D8 /* HICountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35240BD0201408DB00E0C0D8 /* HICountdownViewController.swift */; };
 		356B219D202A5786007113D6 /* countdown-24.json in Resources */ = {isa = PBXBuildFile; fileRef = 356B219B202A5786007113D6 /* countdown-24.json */; };
 		356B219E202A5786007113D6 /* countdown-60.json in Resources */ = {isa = PBXBuildFile; fileRef = 356B219C202A5786007113D6 /* countdown-60.json */; };
@@ -73,7 +82,61 @@
 		95FC1D1E1FCBD20E00F8AD60 /* HIUserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FC1D1D1FCBD20E00F8AD60 /* HIUserDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0A741DA12033DD83007A73E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 951827771EA35AF100049F79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A741D9E2033DD83007A73E6;
+			remoteInfo = "HackIllinois Watch Extension";
+		};
+		0A741DB02033DD83007A73E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 951827771EA35AF100049F79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A741D922033DD83007A73E6;
+			remoteInfo = "HackIllinois Watch";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0A741DB62033DD83007A73E6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0A741DA02033DD83007A73E6 /* HackIllinois Watch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A741DBA2033DD83007A73E6 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				0A741DB22033DD83007A73E6 /* HackIllinois Watch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0A741D932033DD83007A73E6 /* HackIllinois Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HackIllinois Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A741D962033DD83007A73E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		0A741D982033DD83007A73E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0A741D9A2033DD83007A73E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A741D9F2033DD83007A73E6 /* HackIllinois Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "HackIllinois Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A741DA42033DD83007A73E6 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		0A741DA62033DD83007A73E6 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		0A741DA82033DD83007A73E6 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		0A741DAA2033DD83007A73E6 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		0A741DAC2033DD83007A73E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0A741DAE2033DD83007A73E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A741DAF2033DD83007A73E6 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		35240BD0201408DB00E0C0D8 /* HICountdownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HICountdownViewController.swift; sourceTree = "<group>"; };
 		356B219B202A5786007113D6 /* countdown-24.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "countdown-24.json"; sourceTree = "<group>"; };
 		356B219C202A5786007113D6 /* countdown-60.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "countdown-60.json"; sourceTree = "<group>"; };
@@ -146,6 +209,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0A741D9C2033DD83007A73E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9518277C1EA35AF100049F79 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -157,6 +227,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A741D942033DD83007A73E6 /* HackIllinois Watch */ = {
+			isa = PBXGroup;
+			children = (
+				0A741D952033DD83007A73E6 /* Interface.storyboard */,
+				0A741D982033DD83007A73E6 /* Assets.xcassets */,
+				0A741D9A2033DD83007A73E6 /* Info.plist */,
+			);
+			path = "HackIllinois Watch";
+			sourceTree = "<group>";
+		};
+		0A741DA32033DD83007A73E6 /* HackIllinois Watch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0A741DA42033DD83007A73E6 /* InterfaceController.swift */,
+				0A741DA62033DD83007A73E6 /* ExtensionDelegate.swift */,
+				0A741DA82033DD83007A73E6 /* NotificationController.swift */,
+				0A741DAA2033DD83007A73E6 /* ComplicationController.swift */,
+				0A741DAC2033DD83007A73E6 /* Assets.xcassets */,
+				0A741DAE2033DD83007A73E6 /* Info.plist */,
+				0A741DAF2033DD83007A73E6 /* PushNotificationPayload.apns */,
+			);
+			path = "HackIllinois Watch Extension";
+			sourceTree = "<group>";
+		};
 		6B0003FB1C250537E97323BE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +278,8 @@
 			isa = PBXGroup;
 			children = (
 				951827971EA35DB800049F79 /* HackIllinois */,
+				0A741D942033DD83007A73E6 /* HackIllinois Watch */,
+				0A741DA32033DD83007A73E6 /* HackIllinois Watch Extension */,
 				951827801EA35AF100049F79 /* Products */,
 				6B0003FB1C250537E97323BE /* Pods */,
 				EAE6D26341C3ACE27256067A /* Frameworks */,
@@ -194,6 +290,8 @@
 			isa = PBXGroup;
 			children = (
 				9518277F1EA35AF100049F79 /* HackIllinois.app */,
+				0A741D932033DD83007A73E6 /* HackIllinois Watch.app */,
+				0A741D9F2033DD83007A73E6 /* HackIllinois Watch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -395,6 +493,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0A741D922033DD83007A73E6 /* HackIllinois Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A741DB72033DD83007A73E6 /* Build configuration list for PBXNativeTarget "HackIllinois Watch" */;
+			buildPhases = (
+				0A741D912033DD83007A73E6 /* Resources */,
+				0A741DB62033DD83007A73E6 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A741DA22033DD83007A73E6 /* PBXTargetDependency */,
+			);
+			name = "HackIllinois Watch";
+			productName = "HackIllinois Watch";
+			productReference = 0A741D932033DD83007A73E6 /* HackIllinois Watch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		0A741D9E2033DD83007A73E6 /* HackIllinois Watch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A741DB32033DD83007A73E6 /* Build configuration list for PBXNativeTarget "HackIllinois Watch Extension" */;
+			buildPhases = (
+				0A741D9B2033DD83007A73E6 /* Sources */,
+				0A741D9C2033DD83007A73E6 /* Frameworks */,
+				0A741D9D2033DD83007A73E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HackIllinois Watch Extension";
+			productName = "HackIllinois Watch Extension";
+			productReference = 0A741D9F2033DD83007A73E6 /* HackIllinois Watch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		9518277E1EA35AF100049F79 /* HackIllinois */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 951827941EA35AF100049F79 /* Build configuration list for PBXNativeTarget "HackIllinois" */;
@@ -406,10 +538,12 @@
 				4BB122A7E5028FEBC4CB4FEB /* [CP] Embed Pods Frameworks */,
 				FB38EA2841D0B5D4BAE3221B /* [CP] Copy Pods Resources */,
 				95CD0ED6201523B800D79DCC /* ShellScript */,
+				0A741DBA2033DD83007A73E6 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0A741DB12033DD83007A73E6 /* PBXTargetDependency */,
 			);
 			name = HackIllinois;
 			productName = HackIllinois;
@@ -422,10 +556,20 @@
 		951827771EA35AF100049F79 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = HackIllinois;
 				TargetAttributes = {
+					0A741D922033DD83007A73E6 = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = 8VNQTQM2L6;
+						ProvisioningStyle = Automatic;
+					};
+					0A741D9E2033DD83007A73E6 = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = 8VNQTQM2L6;
+						ProvisioningStyle = Automatic;
+					};
 					9518277E1EA35AF100049F79 = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = 8VNQTQM2L6;
@@ -453,11 +597,30 @@
 			projectRoot = "";
 			targets = (
 				9518277E1EA35AF100049F79 /* HackIllinois */,
+				0A741D922033DD83007A73E6 /* HackIllinois Watch */,
+				0A741D9E2033DD83007A73E6 /* HackIllinois Watch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0A741D912033DD83007A73E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A741D992033DD83007A73E6 /* Assets.xcassets in Resources */,
+				0A741D972033DD83007A73E6 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A741D9D2033DD83007A73E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A741DAD2033DD83007A73E6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9518277D1EA35AF100049F79 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -547,6 +710,17 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0A741D9B2033DD83007A73E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A741DA92033DD83007A73E6 /* NotificationController.swift in Sources */,
+				0A741DAB2033DD83007A73E6 /* ComplicationController.swift in Sources */,
+				0A741DA72033DD83007A73E6 /* ExtensionDelegate.swift in Sources */,
+				0A741DA52033DD83007A73E6 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9518277B1EA35AF100049F79 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -611,7 +785,117 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		0A741DA22033DD83007A73E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A741D9E2033DD83007A73E6 /* HackIllinois Watch Extension */;
+			targetProxy = 0A741DA12033DD83007A73E6 /* PBXContainerItemProxy */;
+		};
+		0A741DB12033DD83007A73E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A741D922033DD83007A73E6 /* HackIllinois Watch */;
+			targetProxy = 0A741DB02033DD83007A73E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0A741D952033DD83007A73E6 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A741D962033DD83007A73E6 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		0A741DB42033DD83007A73E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8VNQTQM2L6;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "HackIllinois Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hackillinois.ios.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		0A741DB52033DD83007A73E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8VNQTQM2L6;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "HackIllinois Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hackillinois.ios.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
+		0A741DB82033DD83007A73E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8VNQTQM2L6;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IBSC_MODULE = HackIllinois_Watch_Extension;
+				INFOPLIST_FILE = "HackIllinois Watch/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hackillinois.ios.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		0A741DB92033DD83007A73E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8VNQTQM2L6;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IBSC_MODULE = HackIllinois_Watch_Extension;
+				INFOPLIST_FILE = "HackIllinois Watch/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hackillinois.ios.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
 		951827921EA35AF100049F79 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -753,6 +1037,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0A741DB32033DD83007A73E6 /* Build configuration list for PBXNativeTarget "HackIllinois Watch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A741DB42033DD83007A73E6 /* Debug */,
+				0A741DB52033DD83007A73E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A741DB72033DD83007A73E6 /* Build configuration list for PBXNativeTarget "HackIllinois Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A741DB82033DD83007A73E6 /* Debug */,
+				0A741DB92033DD83007A73E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9518277A1EA35AF100049F79 /* Build configuration list for PBXProject "HackIllinois" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
