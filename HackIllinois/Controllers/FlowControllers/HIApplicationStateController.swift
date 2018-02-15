@@ -22,7 +22,14 @@ class HIApplicationStateController {
 
     // MARK: - Properties
     var window = UIWindow(frame: UIScreen.main.bounds)
-    var user: HIUser?
+    var user: HIUser? {
+        didSet {
+            guard let user = user,
+                let url = URL(string: "hackillinois://qrcode/user?id=\(user.id)&identifier=\(user.identifier)") else { return }
+            let qrCodeImage = QRCode(string: url.absoluteString, size: 100)?.image
+            WatchInterface.shared.image = qrCodeImage
+        }
+    }
 
     // MARK: ViewControllers
     var loginFlowController = HILoginFlowController()

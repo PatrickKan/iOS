@@ -1,14 +1,32 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Countdown-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller title="Countdown" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="HackIllinois_Watch" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="Text" numberOfLines="2" id="4gJ-l8-qD1"/>
+                        <group width="1" alignment="left" id="23d-RQ-oXB">
+                            <items>
+                                <imageView alignment="left" id="f6P-kb-rTg"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="imageGroup" destination="23d-RQ-oXB" id="WWU-z9-GRp"/>
+                        <outlet property="loginLabel" destination="4gJ-l8-qD1" id="sBq-Bm-XkJ"/>
+                        <outlet property="qrCode" destination="f6P-kb-rTg" id="4H5-EK-uh5"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
         </scene>
@@ -31,9 +49,10 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="HackIllinois_Watch" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.92777353525161743" green="0.00028673294582404196" blue="0.54978150129318237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
