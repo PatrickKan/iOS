@@ -25,7 +25,7 @@ class HIApplicationStateController {
     var user: HIUser? {
         didSet {
             guard let user = user,
-                let url = URL(string: "hackillinois://qrcode/user?id=\(user.id)&identifier=\(user.identifier)") else { return }
+                  let url = URL(string: "hackillinois://qrcode/user?id=\(user.id)&identifier=\(user.identifier)") else { return }
             let qrCodeImage = QRCode(string: url.absoluteString, size: 100)?.image
             WatchInterface.shared.image = qrCodeImage
         }

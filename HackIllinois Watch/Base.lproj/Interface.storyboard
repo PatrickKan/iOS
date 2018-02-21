@@ -9,10 +9,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
     </dependencies>
     <scenes>
-        <!--Countdown-->
+        <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller title="Countdown" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="HackIllinois_Watch" customModuleProvider="target">
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="HackIllinois_Watch" customModuleProvider="target">
                     <items>
                         <label alignment="left" text="Text" numberOfLines="2" id="4gJ-l8-qD1"/>
                         <group width="1" alignment="left" id="23d-RQ-oXB">

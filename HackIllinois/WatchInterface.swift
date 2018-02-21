@@ -11,19 +11,17 @@ import UIKit
 import WatchConnectivity
 
 class WatchInterface {
-    
+//    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+//        <#code#>
+//    }
+//
+//    func sessionDidBecomeInactive(_ session: WCSession) {
+//        <#code#>
+//    }
+//
+//    func sessionDidDeactivate(_ session: WCSession) {
+//        <#code#>
+//    }
     static let shared = WatchInterface()
-    var image: UIImage? {
-        didSet {
-            guard let image = image else { return }
-            if let imageData = UIImagePNGRepresentation(image) {
-                WCSession.default.activate()
-                WCSession.default.sendMessageData(imageData, replyHandler: { (data) -> Void in
-                    // handle the response from the device
-                }) { (error) -> Void in
-                    print("error: \(error.localizedDescription)")
-                }
-            }
-        }
-    }
+    var image: UIImage?
 }

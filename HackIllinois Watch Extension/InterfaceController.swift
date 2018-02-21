@@ -18,15 +18,15 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         // Configure interface objects here.
-        self.setTitle("Countdown")
         guard let image = qrCodeImage else {
             loginLabel.setTextColor(HIApplication.Color.hotPink)
-            let font = UIFont.systemFont(ofSize: 13, weight: .light)
+            let font = UIFont.systemFont(ofSize: 20, weight: .medium)
             let attributeString = NSAttributedString( string: "Get started by logging in.",
                                                       attributes: [NSAttributedStringKey.font: font] )
             loginLabel.setAttributedText(attributeString)
             return
         }
+        self.setTitle("Badge")
         imageGroup.setBackgroundColor(HIApplication.Color.darkIndigo)
         qrCode.setImage(image)
     }
@@ -42,8 +42,9 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-    func session(_ session: WCSession, didReceiveMessageData message: Data) {
-        guard let image = UIImage(data: message) else { return }
+    func session(_ session: WCSession, didReceiveMessageData messageData: Data) {
+        print("RECIEVED DATA YAY!")
+        guard let image = UIImage(data: messageData) else { return }
         DispatchQueue.main.async { [weak self] in
             self?.qrCodeImage = image
             self?.loginLabel.setHidden(true)
@@ -51,6 +52,18 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             self?.qrCode.setImage(image)
         }
     }
+    
+    func session(_ session: WCSession, didReceiveMessageData messageData: Data, replyHandler: @escaping (Data) -> Void) {
+        print("RECIEVED DATA YAY!")
+        guard let image = UIImage(data: messageData) else { return }
+        DispatchQueue.main.async { [weak self] in
+            self?.qrCodeImage = image
+            self?.loginLabel.setHidden(true)
+            self?.imageGroup.setBackgroundColor(HIApplication.Color.darkIndigo)
+            self?.qrCode.setImage(image)
+        }
+    }
+    
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {}
     #if os(iOS)
     func sessionDidBecomeInactive(_ session: WCSession) {}

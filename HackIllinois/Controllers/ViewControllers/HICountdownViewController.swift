@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Lottie
+import WatchConnectivity
 
 protocol HICountdownViewControllerDelegate: class {
     func countdownToDateFor(countdownViewController: HICountdownViewController) -> Date?
@@ -71,7 +72,7 @@ class HICountdownViewController: UIViewController {
 extension HICountdownViewController {
     override func loadView() {
         view = UIView()
-
+        
         days.contentMode = .scaleAspectFit
         hours.contentMode = .scaleAspectFit
         minutes.contentMode = .scaleAspectFit
@@ -126,6 +127,7 @@ extension HICountdownViewController {
         NotificationCenter.default.addObserver(self,
             selector: #selector(tearDownCountdown),
             name: .UIApplicationWillResignActive, object: nil)
+        activateWCSession()
     }
 
     override func viewDidDisappear(_ animated: Bool) {
@@ -205,6 +207,39 @@ extension HICountdownViewController {
     @objc func tearDownCountdown() {
         if timer.isValid {
             timer.invalidate()
+        }
+    }
+}
+
+extension HICountdownViewController: WCSessionDelegate {
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        guard let image = WatchInterface.shared.image else { return }
+        guard let ciimage = image.ciImage else { return }
+        let context = CIContext(options: nil)
+        guard let cgimage = context.createCGImage(ciimage, from: ciimage.extent) else { return }
+        let imageFromCGImage = UIImage(cgImage: cgimage)
+        guard let imageData = UIImagePNGRepresentation(imageFromCGImage) else { return }
+        if session.isReachable {
+            WCSession.default.sendMessageData(imageData, replyHandler: { (data) -> Void in
+                // handle the response from the device
+            }) { (error) -> Void in
+                let ac = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "Ok", style: .default))
+                self.present(ac, animated: true)
+            }
+        } else {
+            let ac = UIAlertController(title: "Error", message: "Session isn't reachable", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Ok", style: .default))
+            self.present(ac, animated: true)
+        }
+    }
+    func sessionDidBecomeInactive(_ session: WCSession) {}
+    func sessionDidDeactivate(_ session: WCSession) {}
+    func activateWCSession() {
+        if (WCSession.isSupported()) {
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
         }
     }
 }
