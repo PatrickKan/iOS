@@ -15,15 +15,15 @@ import UIKit
 
 class HITableView: UITableView {
     // MARK: - Types
-    enum Style {
+    enum StyleType {
         case standard
     }
 
     // MARK: - Properties
-    let style_: Style
+    let style_: StyleType
 
     // MARK: - Init
-    init(style: Style) {
+    init(style: StyleType) {
         self.style_ = style
         super.init(frame: .zero, style: .grouped)
         translatesAutoresizingMaskIntoConstraints = false

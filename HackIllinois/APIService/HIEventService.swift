@@ -16,6 +16,7 @@ import CoreData
 
 final class HIEventService: HIBaseService {
     override static var baseURL: String {
+        print("this is my base url: \(super.baseURL)")
         return super.baseURL + "/event"
     }
 
@@ -37,7 +38,7 @@ final class HIEventService: HIBaseService {
 //    }
 
     static func getAllLocations() -> APIRequest<HIAPILocation.Contained> {
-        return APIRequest<HIAPILocation.Contained>(service: self, endpoint: "/location/all", method: .GET)
+        return APIRequest<HIAPILocation.Contained>(service: self, endpoint: "/", method: .GET)
     }
 
     // MARK: - Favorties

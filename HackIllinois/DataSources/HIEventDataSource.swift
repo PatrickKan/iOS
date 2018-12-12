@@ -26,9 +26,20 @@ final class HIEventDataSource {
             return
         }
         isRefreshing = true
-
+        print("I am getting a call")
+        HIEventService.getAllEvents()
+            .onCompletion { result in
+                print(result)
+                if case let .success(containedEvents) = result {
+                    print("GET::EVENTS::SUCCESS")
+                }
+        }
+        .authorization(HIApplicationStateController.shared.user)
+        .perform()
         HIEventService.getAllLocations()
         .onCompletion { result in
+            print("ring ring")
+            print(result)
             if case let .success(containedLocations) = result {
                 print("GET::LOCATIONS::SUCCESS")
                 HIEventService.getAllEvents()

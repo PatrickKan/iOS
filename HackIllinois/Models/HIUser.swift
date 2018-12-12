@@ -72,7 +72,7 @@ struct HIUser: Codable {
     var token: String
     var identifier: String
     var isActive: Bool
-    var id: Int
+    var id: String
 
     var name: String?
     var dietaryRestrictions: HIDietaryRestrictions?
@@ -80,6 +80,16 @@ struct HIUser: Codable {
 
 // MARK: - DataConvertible
 extension HIUser: DataConvertible {
+    init?(name: String?, isActive: Bool, loginMethod: HILoginMethod) {
+        self.loginMethod = loginMethod
+        self.permissions = HIUserPermissions(rawValue: "ATTENDEE")!
+        self.isActive = isActive
+        self.token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFybmF2c2Fua2FyYW5AZ21haWwuY29tIiwiZXhwIjoyNTM2ODgzMjAwLCJpZCI6ImdpdGh1YjYwOTkzNTciLCJyb2xlcyI6WyJVc2VyIiwiQXBwbGljYW50IiwiQWRtaW4iXX0.poi_r6pSvmuoxdYQfy_77BB_v4pxe3Z_2rUfMvnGwmg"
+        self.id = "1"
+        self.identifier = ""
+        self.dietaryRestrictions = nil
+    }
+    
     init?(data: Data) {
         do {
             self = try JSONDecoder().decode(HIUser.self, from: data)
